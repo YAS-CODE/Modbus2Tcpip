@@ -1,0 +1,54 @@
+
+customer profiling feature:-
+============================
+
+create /home/etc/customer.profile on Moxa`Filesystem in order to customize Moxa UI, An example(customer.profile) has been attached too like content like......
+
+HEADER_BACK_COL=#FF6633
+NAV_TEXT_COL=blue
+DISABLE_ABOUT=1
+DISABLE_CONTACT=1
+DISABLE_SERVER=1
+HEADER_LOGO_BACK_COL=#808080
+
+
+To customize About and Contact section, make div for both and put it in /home/etc/customer.profile.about and /home/etc/customer.profile.contact respectively.....
+
+
+
+
+How to deploy binaries:-
+========================
+
+
+To deploy Webserver files on Moxa please put files in Moxa`s filesystem according to following instructions....
+
+ rc, rc.local, boa.conf,inittab,iptable_modules,iptables.rules------> /etc/
+ Watchdog, MoxaGateway,rebootd----------> /home/Moxa/
+ httpd(dir)------------------> /home/
+ dailyreset------------------>/home/etc/
+ 
+ 
+
+Note:- Please do not forget to assgin permission on each folder like, chmod 755 /etc/*;chmod 755 /home/Moxa/*;
+
+
+
+
+Expected bugs:-
+===============
+
+* Data Cache Issue found in previous release and has been fixed in this...
+
+
+
+
+
+
+
+
+
+
+
+
+

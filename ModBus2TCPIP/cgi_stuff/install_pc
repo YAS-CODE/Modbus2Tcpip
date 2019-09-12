@@ -1,0 +1,8 @@
+rm -rf /home/httpd/cgi-bin/*
+g++ -g save_pass.c -o save_pass_conf.cgi;cp save_pass_conf.cgi /home/httpd/cgi-bin/
+g++ -g loadiplan.c -o loadiplan.cgi;cp loadiplan.cgi /home/httpd/cgi-bin/
+g++ -g pass_auth.c -o auth.cgi;cp auth.cgi /home/httpd/cgi-bin/
+g++ -g logout.c -o logout.cgi;cp logout.cgi /home/httpd/cgi-bin/
+g++ -g save_server_conf.c -o save_server_conf.cgi;cp save_server_conf.cgi /home/httpd/cgi-bin/
+g++ -g save_ip_settings.c -o save_ip_settings.cgi;cp save_ip_settings.cgi /home/httpd/cgi-bin/
+g++ -g login.c -o login.cgi;cp login.cgi /home/httpd/cgi-bin/

@@ -1,0 +1,12 @@
+EXEC = mDNSResponder
+#OBJS = Responder.o mDNSPosix.o GenLinkedList.o mDNSUNP.o mDNS.o DNSCommon.o mDNSDebug.o uDNS.o DNSDigest.o
+OBJS = mDNSPosix.o GenLinkedList.o mDNSUNP.o mDNS.o DNSCommon.o mDNSDebug.o uDNS.o DNSDigest.o Responder.o PlatformCommon.o
+
+CFLAGS += -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\"
+CFLAGS += -DNOT_HAVE_SA_LEN -DUSES_NETLINK -DHAVE_LINUX -DNOT_HAVE_DAEMON
+CFLAGS += -Wall -g
+
+all: 
+	arm-elf-gcc -O2 -fomit-frame-pointer -fno-builtin -fpic -msingle-pic-base  -Wl,-elf2flt="-r -z -s 32768" -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\" -DNOT_HAVE_SA_LEN -DUSES_NETLINK -DHAVE_LINUX -DNOT_HAVE_DAEMON -mstructure-size-boundary=8  mDNSPosix.c GenLinkedList.c mDNSUNP.c mDNS.c DNSCommon.c mDNSDebug.c uDNS.c DNSDigest.c Responder.c PlatformCommon.c -o mDNSResponder
+clean:
+	rm -f $(EXEC) *.elf *.gdb *.o

@@ -1,0 +1,20 @@
+iptables -F
+# allow established sessions to receive traffic
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# allow SSH 
+#iptables -I INPUT -p tcp --dport 22 -j ACCEPT
+
+# Allow Ping
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+
+#Allow Web
+iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+
+#Allow 8636 port at localhost
+#iptables -A INPUT -p tcp --dport 8636 -s 127.0.0.1 -j ACCEPT
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+
+# block everything else 
+iptables -A INPUT -j DROP

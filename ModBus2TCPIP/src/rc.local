@@ -1,0 +1,43 @@
+#!/bin/sh
+#Add you want to run daemon
+
+sh /etc/iptable_modules
+sh /etc/iptables.rules
+
+chmod 755 /home/Moxa/*
+if [  -f /home/Moxa/crashes ]; then
+        rm /home/Moxa/crashes
+fi
+rm -rf /home/logs/*
+rm -rf /home/etc/auth
+
+if [ ! -d /home/etc ]; then
+mkdir /home/etc/
+fi
+                                      
+if [  -f /home/Moxa/installing ]; then
+    echo "Unfinished installation found..." 
+    sh /home/Moxa/remote_cache/install.sh 2>> /home/Moxa/install_log
+fi                 
+if [  -f /home/etc/network ]; then
+    echo "Web Network setting found..."
+    sh /home/etc/network
+else
+    echo "Web Network setting not found..."
+    dhcpcd -p -a eth0 &
+fi
+
+ rm -rf /home/Moxa/remote_cache/*
+
+if grep -qs '/mnt/sd' /proc/mounts; then
+    echo "It's mounted."
+    /home/Moxa/logger &
+fi
+/home/Moxa/Watchdog &
+/home/Moxa/rebootd &
+#/home/Moxa/Web_wd &
+
+
+
+#boa&
+#/home/Moxa/zeroconf -i eth0 -n -v -f &

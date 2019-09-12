@@ -1,0 +1,9 @@
+DEST=/home/yas/make_release/Gateway1.0
+rm -rf $DEST/*.cgi
+arm-elf-g++ -Wl, -elf2flt -D_STLP_UNIX -lpthread -lmoxalib save_pass.c -o save_pass_conf.cgi;cp save_pass_conf.cgi $DEST
+arm-elf-g++ -Wl, -elf2flt -D_STLP_UNIX -lpthread -lmoxalib loadiplan.c -o loadiplan.cgi;cp loadiplan.cgi $DEST
+arm-elf-g++ -Wl, -elf2flt -D_STLP_UNIX -lpthread -lmoxalib pass_auth.c -o auth.cgi;cp auth.cgi $DEST
+arm-elf-g++ -Wl, -elf2flt -D_STLP_UNIX -lpthread -lmoxalib logout.c -o logout.cgi;cp logout.cgi $DEST
+arm-elf-g++ -Wl, -elf2flt -D_STLP_UNIX -lpthread -lmoxalib save_server_conf.c -o save_server_conf.cgi;cp save_server_conf.cgi $DEST
+arm-elf-g++ -Wl, -elf2flt -D_STLP_UNIX -lpthread -lmoxalib save_ip_settings.c -o save_ip_settings.cgi;cp save_ip_settings.cgi $DEST
+arm-elf-g++ -Wl, -elf2flt -D_STLP_UNIX -lpthread -lmoxalib login.c -o login.cgi;cp login.cgi $DEST

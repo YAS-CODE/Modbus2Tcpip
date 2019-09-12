@@ -1,0 +1,32 @@
+
+
+srcdir = .
+LDFLAGS =  
+LIBS =  
+CFLAGS = -g
+
+# Change these if necessary
+
+CC = g++ 
+CPP = g++
+
+FILES = MoxaGateway 
+ 
+all:	$(FILES)
+	chmod 755 $(FILES)
+
+MoxaGateway:	Utility.cpp  ModbusController.cpp ServerController.cpp GatewayCom.cpp LodamModbusProject.cpp
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LIBS) -lpthread -lssl -lcrypto
+
+GatewayDemon:
+	gcc  GatewayDemon.c -o GatewayDemon
+Watchdog:
+	g++  -o Watchdog Watchdog.c -lpthread 
+install:
+	cp GatewayDemon /home/Moxa/
+	cp Watchdog /home/Moxa/
+	cp MoxaGateway /home/Moxa/
+kill:
+	killall -9 MoxaGateway;killall -9  GatewayDemon;killall -9  Watchdog;
+clean:
+	rm -f *.o MoxaGateway *.gdb $(FILES) 

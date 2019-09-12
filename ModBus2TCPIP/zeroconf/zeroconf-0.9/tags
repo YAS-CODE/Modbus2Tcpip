@@ -1,0 +1,173 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADDR_CLAIM	.pc/compilefix.patch/zeroconf.c	/^  ADDR_CLAIM,$/;"	e	enum:__anon1	file:
+ADDR_CLAIM	zeroconf.c	/^  ADDR_CLAIM,$/;"	e	enum:__anon2	file:
+ADDR_DEFEND	.pc/compilefix.patch/zeroconf.c	/^  ADDR_DEFEND,$/;"	e	enum:__anon1	file:
+ADDR_DEFEND	zeroconf.c	/^  ADDR_DEFEND,$/;"	e	enum:__anon2	file:
+ADDR_FINAL	.pc/compilefix.patch/zeroconf.c	/^  ADDR_FINAL,$/;"	e	enum:__anon1	file:
+ADDR_FINAL	zeroconf.c	/^  ADDR_FINAL,$/;"	e	enum:__anon2	file:
+ADDR_INIT	.pc/compilefix.patch/zeroconf.c	/^  ADDR_INIT,$/;"	e	enum:__anon1	file:
+ADDR_INIT	zeroconf.c	/^  ADDR_INIT,$/;"	e	enum:__anon2	file:
+ADDR_PROBE	.pc/compilefix.patch/zeroconf.c	/^  ADDR_PROBE,$/;"	e	enum:__anon1	file:
+ADDR_PROBE	zeroconf.c	/^  ADDR_PROBE,$/;"	e	enum:__anon2	file:
+ADDR_RELEASE	.pc/compilefix.patch/zeroconf.c	/^  ADDR_RELEASE$/;"	e	enum:__anon1	file:
+ADDR_RELEASE	zeroconf.c	/^  ADDR_RELEASE$/;"	e	enum:__anon2	file:
+ADDR_TAKE	.pc/compilefix.patch/zeroconf.c	/^  ADDR_TAKE,$/;"	e	enum:__anon1	file:
+ADDR_TAKE	zeroconf.c	/^  ADDR_TAKE,$/;"	e	enum:__anon2	file:
+ANNOUNCE_INTERVAL	.pc/compilefix.patch/zeroconf.c	45;"	d	file:
+ANNOUNCE_INTERVAL	zeroconf.c	48;"	d	file:
+ANNOUNCE_NUM	.pc/compilefix.patch/zeroconf.c	44;"	d	file:
+ANNOUNCE_NUM	zeroconf.c	47;"	d	file:
+ANNOUNCE_WAIT	.pc/compilefix.patch/zeroconf.c	46;"	d	file:
+ANNOUNCE_WAIT	zeroconf.c	49;"	d	file:
+ARP_IP_PROTO	.pc/compilefix.patch/zeroconf.c	53;"	d	file:
+ARP_IP_PROTO	zeroconf.c	56;"	d	file:
+CFLAGS	Makefile	/^CFLAGS= -MMD -O2 -g$/;"	m
+CWARN	Makefile	/^CWARN= -W -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcomment -Wformat=2 -Wno-format-extra-args -Wimplicit-int -Werror-implicit-function-declaration -Wmain -Wmissing-braces -Wparentheses -Wswitch -Wundef -Wshadow -Wwrite-strings$/;"	m
+DEFEND_INTERVAL	.pc/compilefix.patch/zeroconf.c	49;"	d	file:
+DEFEND_INTERVAL	zeroconf.c	52;"	d	file:
+DELAY_H	delay.h	15;"	d
+FLAG_TEST_DUMP	.pc/compilefix.patch/zeroconf.c	57;"	d	file:
+FLAG_TEST_DUMP	zeroconf.c	60;"	d	file:
+IPV4_LLBASE	.pc/compilefix.patch/zeroconf.c	54;"	d	file:
+IPV4_LLBASE	zeroconf.c	57;"	d	file:
+MAX_CONFLICTS	.pc/compilefix.patch/zeroconf.c	47;"	d	file:
+MAX_CONFLICTS	zeroconf.c	50;"	d	file:
+NLBUF	.pc/compilefix.patch/zeroconf.c	52;"	d	file:
+NLBUF	zeroconf.c	55;"	d	file:
+OBJS	Makefile	/^OBJS= $(SRCS:.c=.o)$/;"	m
+PROBE_MAX	.pc/compilefix.patch/zeroconf.c	42;"	d	file:
+PROBE_MAX	zeroconf.c	45;"	d	file:
+PROBE_MIN	.pc/compilefix.patch/zeroconf.c	41;"	d	file:
+PROBE_MIN	zeroconf.c	44;"	d	file:
+PROBE_NUM	.pc/compilefix.patch/zeroconf.c	43;"	d	file:
+PROBE_NUM	zeroconf.c	46;"	d	file:
+PROBE_WAIT	.pc/compilefix.patch/zeroconf.c	40;"	d	file:
+PROBE_WAIT	zeroconf.c	43;"	d	file:
+Q	Makefile	/^Q=@$/;"	m
+RATE_LIMIT_INTERVAL	.pc/compilefix.patch/zeroconf.c	48;"	d	file:
+RATE_LIMIT_INTERVAL	zeroconf.c	51;"	d	file:
+SRCS	Makefile	/^SRCS=zeroconf.c delay.c$/;"	m
+TARGET	Makefile	/^TARGET=zeroconf$/;"	m
+_GNU_SOURCE	.pc/compilefix.patch/zeroconf.c	22;"	d	file:
+_GNU_SOURCE	.pc/compilefix.patch/zeroconf.c	24;"	d	file:
+_GNU_SOURCE	zeroconf.c	22;"	d	file:
+_GNU_SOURCE	zeroconf.c	24;"	d	file:
+addattr_l	.pc/compilefix.patch/zeroconf.c	/^int addattr_l(struct nlmsghdr *n,$/;"	f
+addattr_l	zeroconf.c	/^int addattr_l(struct nlmsghdr *n,$/;"	f
+address_picked	.pc/compilefix.patch/zeroconf.c	/^int address_picked = 0;$/;"	v
+address_picked	zeroconf.c	/^int address_picked = 0;$/;"	v
+arp	.pc/compilefix.patch/zeroconf.c	/^  struct arphdr       arp;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::arphdr	file:
+arp	zeroconf.c	/^  struct arphdr       arp;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::arphdr	file:
+arp_claim	.pc/compilefix.patch/zeroconf.c	/^void arp_claim(int as, struct intf *intf)$/;"	f
+arp_claim	zeroconf.c	/^void arp_claim(int as, struct intf *intf)$/;"	f
+arp_conflict	.pc/compilefix.patch/zeroconf.c	/^int  arp_conflict(struct intf *intf, struct arp_packet *pkt)$/;"	f
+arp_conflict	zeroconf.c	/^int  arp_conflict(struct intf *intf, struct arp_packet *pkt)$/;"	f
+arp_defend	.pc/compilefix.patch/zeroconf.c	/^void arp_defend(int as, struct intf *intf)$/;"	f
+arp_defend	zeroconf.c	/^void arp_defend(int as, struct intf *intf)$/;"	f
+arp_open	.pc/compilefix.patch/zeroconf.c	/^int arp_open(struct intf *intf)$/;"	f
+arp_open	zeroconf.c	/^int arp_open(struct intf *intf)$/;"	f
+arp_packet	.pc/compilefix.patch/zeroconf.c	/^struct arp_packet {$/;"	s	file:
+arp_packet	zeroconf.c	/^struct arp_packet {$/;"	s	file:
+arp_packet_dump	.pc/compilefix.patch/zeroconf.c	/^void arp_packet_dump(struct arp_packet *pkt)$/;"	f
+arp_packet_dump	zeroconf.c	/^void arp_packet_dump(struct arp_packet *pkt)$/;"	f
+arp_packet_send	.pc/compilefix.patch/zeroconf.c	/^void arp_packet_send(int as,$/;"	f
+arp_packet_send	zeroconf.c	/^void arp_packet_send(int as,$/;"	f
+arp_probe	.pc/compilefix.patch/zeroconf.c	/^void arp_probe(int as, struct intf *intf)$/;"	f
+arp_probe	zeroconf.c	/^void arp_probe(int as, struct intf *intf)$/;"	f
+check_args	.pc/compilefix.patch/zeroconf.c	/^void check_args(int argc, char * const argv[], struct intf *intf)$/;"	f
+check_args	zeroconf.c	/^void check_args(int argc, char * const argv[], struct intf *intf)$/;"	f
+check_ifname_exists	.pc/compilefix.patch/zeroconf.c	/^int check_ifname_exists(int nl, struct intf *intf)$/;"	f
+check_ifname_exists	zeroconf.c	/^int check_ifname_exists(int nl, struct intf *intf)$/;"	f
+check_ifname_type	.pc/compilefix.patch/zeroconf.c	/^int check_ifname_type(struct intf *intf)$/;"	f
+check_ifname_type	zeroconf.c	/^int check_ifname_type(struct intf *intf)$/;"	f
+claim_count	.pc/compilefix.patch/zeroconf.c	/^int claim_count = 0;$/;"	v
+claim_count	zeroconf.c	/^int claim_count = 0;$/;"	v
+conflict_count	.pc/compilefix.patch/zeroconf.c	/^int conflict_count = 0;$/;"	v
+conflict_count	zeroconf.c	/^int conflict_count = 0;$/;"	v
+delay_cancel	delay.c	/^void delay_cancel      (void)$/;"	f
+delay_is_running	delay.c	/^int delay_is_running = 0;$/;"	v
+delay_is_waiting	delay.c	/^int  delay_is_waiting  (void)$/;"	f
+delay_run	delay.c	/^void delay_run         (struct itimerval *delay)$/;"	f
+delay_setup_fixed	delay.c	/^void delay_setup_fixed (struct itimerval *delay, int delay_secs)$/;"	f
+delay_setup_immed	delay.c	/^void delay_setup_immed(struct itimerval *delay)$/;"	f
+delay_setup_random	delay.c	/^void delay_setup_random(struct itimerval *delay,$/;"	f
+delay_timeout	delay.c	/^sig_atomic_t delay_timeout;$/;"	v
+delay_wait	delay.h	36;"	d
+deps	Makefile	/^deps := ${patsubst %.c,%.d,${wildcard *.c}}$/;"	m
+flags	.pc/compilefix.patch/zeroconf.c	/^  unsigned int      flags;$/;"	m	struct:intf	file:
+flags	zeroconf.c	/^  unsigned int      flags;$/;"	m	struct:intf	file:
+force	.pc/compilefix.patch/zeroconf.c	/^int force = 0;$/;"	v
+force	zeroconf.c	/^int force = 0;$/;"	v
+getopt_long	.pc/compilefix.patch/zeroconf.c	843;"	d	file:
+getopt_long	zeroconf.c	850;"	d	file:
+index	.pc/compilefix.patch/zeroconf.c	/^  int               index;$/;"	m	struct:intf	file:
+index	zeroconf.c	/^  int               index;$/;"	m	struct:intf	file:
+intf	.pc/compilefix.patch/zeroconf.c	/^struct intf {$/;"	s	file:
+intf	zeroconf.c	/^struct intf {$/;"	s	file:
+ip	.pc/compilefix.patch/zeroconf.c	/^  struct in_addr    ip;$/;"	m	struct:intf	typeref:struct:intf::in_addr	file:
+ip	zeroconf.c	/^  struct in_addr    ip;$/;"	m	struct:intf	typeref:struct:intf::in_addr	file:
+mac	.pc/compilefix.patch/zeroconf.c	/^  struct ether_addr mac;$/;"	m	struct:intf	typeref:struct:intf::ether_addr	file:
+mac	zeroconf.c	/^  struct ether_addr mac;$/;"	m	struct:intf	typeref:struct:intf::ether_addr	file:
+main	.pc/compilefix.patch/zeroconf.c	/^int main(int argc, char **argv)$/;"	f
+main	zeroconf.c	/^int main(int argc, char **argv)$/;"	f
+mypid	.pc/compilefix.patch/zeroconf.c	/^pid_t mypid = -1;$/;"	v
+mypid	zeroconf.c	/^pid_t mypid = -1;$/;"	v
+name	.pc/compilefix.patch/zeroconf.c	/^  char              name[IFNAMSIZ+1];$/;"	m	struct:intf	file:
+name	zeroconf.c	/^  char              name[IFNAMSIZ+1];$/;"	m	struct:intf	file:
+netlink_addr_add	.pc/compilefix.patch/zeroconf.c	/^void netlink_addr_add(int nl, struct intf *intf)$/;"	f
+netlink_addr_add	zeroconf.c	/^void netlink_addr_add(int nl, struct intf *intf)$/;"	f
+netlink_addr_del	.pc/compilefix.patch/zeroconf.c	/^void netlink_addr_del(int nl, struct intf *intf)$/;"	f
+netlink_addr_del	zeroconf.c	/^void netlink_addr_del(int nl, struct intf *intf)$/;"	f
+netlink_addr_do	.pc/compilefix.patch/zeroconf.c	/^void netlink_addr_do(int nl, int op, struct intf *intf)$/;"	f	file:
+netlink_addr_do	zeroconf.c	/^void netlink_addr_do(int nl, int op, struct intf *intf)$/;"	f	file:
+netlink_close	.pc/compilefix.patch/zeroconf.c	/^int netlink_close(int nl)$/;"	f
+netlink_close	zeroconf.c	/^int netlink_close(int nl)$/;"	f
+netlink_dump	.pc/compilefix.patch/zeroconf.c	/^void netlink_dump(struct nlmsghdr *n)$/;"	f
+netlink_dump	zeroconf.c	/^void netlink_dump(struct nlmsghdr *n)$/;"	f
+netlink_dump_rta	.pc/compilefix.patch/zeroconf.c	/^void netlink_dump_rta(struct rtattr *rta, int length, int family)$/;"	f
+netlink_dump_rta	zeroconf.c	/^void netlink_dump_rta(struct rtattr *rta, int length, int family)$/;"	f
+netlink_is_from_us	.pc/compilefix.patch/zeroconf.c	/^int netlink_is_from_us(struct nlmsghdr *n)$/;"	f
+netlink_is_from_us	zeroconf.c	/^int netlink_is_from_us(struct nlmsghdr *n)$/;"	f
+netlink_is_link_up	.pc/compilefix.patch/zeroconf.c	/^int netlink_is_link_up(struct intf *intf, struct nlmsghdr *n)$/;"	f
+netlink_is_link_up	zeroconf.c	/^int netlink_is_link_up(struct intf *intf, struct nlmsghdr *n)$/;"	f
+netlink_is_our_iface	.pc/compilefix.patch/zeroconf.c	/^void netlink_is_our_iface(struct intf *intf, struct nlmsghdr *n)$/;"	f
+netlink_is_our_iface	zeroconf.c	/^void netlink_is_our_iface(struct intf *intf, struct nlmsghdr *n)$/;"	f
+netlink_open	.pc/compilefix.patch/zeroconf.c	/^int netlink_open(int proto, __u32 groups)$/;"	f
+netlink_open	zeroconf.c	/^int netlink_open(int proto, __u32 groups)$/;"	f
+netlink_qualify	.pc/compilefix.patch/zeroconf.c	/^int netlink_qualify(struct nlmsghdr *n, size_t length)$/;"	f
+netlink_qualify	zeroconf.c	/^int netlink_qualify(struct nlmsghdr *n, size_t length)$/;"	f
+netlink_send	.pc/compilefix.patch/zeroconf.c	/^int netlink_send(int nl, struct nlmsghdr *n)$/;"	f
+netlink_send	zeroconf.c	/^int netlink_send(int nl, struct nlmsghdr *n)$/;"	f
+nofork	.pc/compilefix.patch/zeroconf.c	/^int nofork = 0;$/;"	v
+nofork	zeroconf.c	/^int nofork = 0;$/;"	v
+probe_count	.pc/compilefix.patch/zeroconf.c	/^int probe_count = 0;$/;"	v
+probe_count	zeroconf.c	/^int probe_count = 0;$/;"	v
+reserved	.pc/compilefix.patch/zeroconf.c	/^  unsigned char       reserved[18];$/;"	m	struct:arp_packet	file:
+reserved	zeroconf.c	/^  unsigned char       reserved[18];$/;"	m	struct:arp_packet	file:
+self_pipe	.pc/compilefix.patch/zeroconf.c	/^int self_pipe[2] = { -1, -1 };$/;"	v
+self_pipe	zeroconf.c	/^int self_pipe[2] = { -1, -1 };$/;"	v
+sender_ip	.pc/compilefix.patch/zeroconf.c	/^  struct in_addr      sender_ip;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::in_addr	file:
+sender_ip	zeroconf.c	/^  struct in_addr      sender_ip;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::in_addr	file:
+sender_mac	.pc/compilefix.patch/zeroconf.c	/^  struct ether_addr   sender_mac;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::ether_addr	file:
+sender_mac	zeroconf.c	/^  struct ether_addr   sender_mac;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::ether_addr	file:
+sig_handler	.pc/compilefix.patch/zeroconf.c	/^static void sig_handler(int signo)$/;"	f	file:
+sig_handler	zeroconf.c	/^static void sig_handler(int signo)$/;"	f	file:
+signal_install	.pc/compilefix.patch/zeroconf.c	/^int signal_install(int signo)$/;"	f
+signal_install	zeroconf.c	/^int signal_install(int signo)$/;"	f
+target_ip	.pc/compilefix.patch/zeroconf.c	/^  struct in_addr      target_ip;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::in_addr	file:
+target_ip	zeroconf.c	/^  struct in_addr      target_ip;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::in_addr	file:
+target_mac	.pc/compilefix.patch/zeroconf.c	/^  struct ether_addr   target_mac;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::ether_addr	file:
+target_mac	zeroconf.c	/^  struct ether_addr   target_mac;$/;"	m	struct:arp_packet	typeref:struct:arp_packet::ether_addr	file:
+up	.pc/compilefix.patch/zeroconf.c	/^  int               up;$/;"	m	struct:intf	file:
+up	zeroconf.c	/^  int               up;$/;"	m	struct:intf	file:
+usage	.pc/compilefix.patch/zeroconf.c	/^void usage(void)$/;"	f
+usage	zeroconf.c	/^void usage(void)$/;"	f
+verbose	.pc/compilefix.patch/zeroconf.c	/^int verbose = 0;$/;"	v
+verbose	zeroconf.c	/^int verbose = 0;$/;"	v
+zeroconf_counter_reset	.pc/compilefix.patch/zeroconf.c	/^void zeroconf_counter_reset(void)$/;"	f
+zeroconf_counter_reset	zeroconf.c	/^void zeroconf_counter_reset(void)$/;"	f

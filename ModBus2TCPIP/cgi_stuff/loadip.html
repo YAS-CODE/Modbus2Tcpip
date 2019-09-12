@@ -1,0 +1,404 @@
+Content-type: text/html
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Remote Caretaking Gateway</title>
+      
+      <script src="/jquery.min.js"></script>
+<link rel="stylesheet" type="style/css" >
+<style>
+   body {
+   background-color: #EEE;
+   font-family: Helvetica, Arial, sans-serif;
+   }
+   a {
+   text-decoration: none;
+   color: red;
+   }
+   h1, h2, h3 {
+   margin: 0;
+   }
+   #nav ul {
+   list-style-type: none;
+   padding: 0px;
+   }
+   #header {
+   padding: 0px;
+   background-color: #B51A1D;
+   color: white;
+   height: 110px;
+   /*    text-align: center;*/
+   }
+   #TopMenuRight{
+   width: 85%;
+   float:left;
+   font: 14px "Arial",Helvetica,Arial,sans-serif;
+   }
+   .top-headline {
+   color: #fff;
+   display: inline-block;
+   margin-top: 45px;
+   }
+   .h2m {
+   padding-top: 8px;
+   font-size: 21px;
+   font-weight: bold;
+   padding-left: 80px;
+   }
+   #TopMenuLeft{
+   width:15%;
+   background-color: #ffffff;;
+   height: 110px;
+   float:left;
+   }
+   #TopMenuLogo
+   {
+   background:url("/images/nilan_logo.svg") no-repeat center center;
+   background-size: 75%;
+   height:110px;
+   }
+   #container {
+   background-color: white;
+   width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   }
+   #content {
+   padding: 10px;
+   }
+#nav {
+    width: 180px;
+    float: top;
+    height: 100%;
+  bottom: 0;
+}
+#nav ul li a {
+display: inline-block;
+padding: 10px 15px;
+}
+   #main {
+   width: 600px;
+   float: right;
+   }
+   #footer {
+   clear: both;
+   padding: 0px;
+   background-color: #999;
+   color: white;
+   text-align: right;
+   }
+   #nav .selected {
+   font-weight: bold;
+   }
+</style>
+      <script>
+         $(document).ready(function(){
+           // Set trigger and container variables
+           var trigger = $('#nav ul li a'),
+               container = $('#main');
+         //alert("hello ready!!!!");
+           
+           // Fire on click
+           trigger.on('click', function(){
+             // Set $this for re-use. Set target from data attribute
+             var $this = $(this),
+               target = $this.data('target');       
+             
+             // Load target page into container
+             //container.load(target + '.php');
+//             container.load('about.php');
+		if(target=='GW'){
+		$("#main").hide();
+		$("#content-about").hide();
+		$("#content-contact").hide();
+		$("#gw_server").show();
+		}
+		else if(target=='about'){
+		$("#main").hide();
+		$("#content-contact").hide();
+		$("#gw_server").hide();
+		$("#content-about").show();
+		}
+		else if(target=='home'){
+		$("#content-about").hide();
+		$("#content-contact").hide();
+		$("#gw_server").hide();
+		$("#main").show();
+		}
+		else if(target=='contact'){
+		$("#main").hide();
+		$("#content-about").hide();
+		$("#gw_server").hide();
+		$("#content-contact").show();
+		}
+  			
+             // Stop normal link behavior
+             return false;
+           });
+         });
+      </script>
+   </head>
+   <body>
+      <div id="container">
+         <div id="header">
+            <div id="TopMenuRight" >
+               <!-- Check for the directive  -->
+               <span class="top-headline h2m ng-binding" ng-bind="title">Remote Caretaking Gateway</span>
+            </div>
+            <div id="TopMenuLeft">
+               <div id="TopMenuLogo"></div>
+            </div>
+         </div>
+         <div id="content">
+             <table>
+  <tr>
+    <td valign="top">
+	<div id="nav">
+               <ul>
+		<li><a href="#" data-target="home">Home</a></li>
+        	<li><a href="#" data-target="GW">Gateyways Server</a></li>
+		<li><a href="#" data-target="about">About</a></li>
+        	<li><a href="#" data-target="contact">Contact</a></li>
+	       </ul>
+            </div>
+	</td>
+    <td>
+	<div>
+            <div id="main">
+               <!--<blockquote>-->
+               <big>LAN Interface Setup</big>
+               <table border=0 width=550 cellspacing=0 cellpadding=0>
+                  <tr>
+                     <td>
+                        <hr size=1 noshade >
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><small>
+                        This page allows configuration of static or dynamic IP address assignment
+                        </small>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <hr size=1 noshade >
+                     </td>
+                  </tr>
+               </table>
+   <form action="save_ip_settings.cgi" method="GET">
+   <table border=0 width=550 cellspacing=0 cellpadding=0>
+   	<tr>
+   		<td width="30%" valign=top> Gateway IP :</td>
+   		<td width="70%">
+   			<select id="lan_type" name="lan_type"  onChange="changetextbox()">
+   			<%  choice = getIndex("lan_type");
+   			if ( choice == 0 ) {
+   			write( "<option  value=0>Static</option>" );
+   			write( "<option selected value=1>Automatic</option>" );
+   			}
+   			%>
+   			</select>
+   		</td>
+   	</tr>
+   	<tr><td>&nbsp;</td><td></td></tr>
+   	<tr><td>&nbsp;</td><td></td></tr>
+      <tr>
+         <td width="30%" valign=top>IP Address :</td>
+         <td width="70%"><input type="text" id="lan_ip" name="lan_ip" size="15" maxlength="15" value="0.0.0.0" maxlength="16" disabled> </td>
+     </tr>
+   	<tr><td>&nbsp;</td><td></td></tr>
+   	<tr>
+         <td width="30%" valign=top>Subnet Mask :</td>
+         <td width="70%"><input type="text" id="lan_mask" name="lan_mask" size="15" maxlength="15" value="0.0.0.0" maxlength="16" disabled> </td>
+     </tr>
+   	<tr><td>&nbsp;</td><td></td></tr>
+   	<tr>
+   		<td width="30%" valign=top>Default Gateway :</td>
+   		<td width="70%"><input type="text" id="lan_gateway" name="lan_gateway" size="15" maxlength="15" value="0.0.0.0" maxlength="16" disabled> </td>
+   	</tr>
+   	<tr><td>&nbsp;</td><td></td></tr>
+   <tr><td>&nbsp;</td><td></td></tr>
+   <tr><td>&nbsp;</td><td></td></tr>
+     <tr>
+         <td></td>
+         <td>
+   	<input type="submit" name="save" value="Save & Reboot" onclick="return foo();" />
+   	&nbsp;&nbsp;
+         <input type="reset" value="Reset" name="reset" onClick="resetClick()">
+         </td>
+     </tr>
+     </table>
+     <br>      
+    </form>
+            </div>
+            <div id="gw_server" hidden>
+               <!--<blockquote>-->
+               <big>Gateway Server Setup</big>
+               <table border="0" width="550" cellspacing="0" cellpadding="0">
+                  <tbody>
+                     <tr>
+                        <td>
+                           <hr size="1" noshade="">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><small>
+                           This page allows configuration of gateway Server.
+                           </small>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <hr size="1" noshade="">
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <form action="save_server_conf.cgi" method="GET">
+                  <table border="0" width="550" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td>&nbsp;</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td width="30%" valign="top">Gateway Server Address:</td>
+                           <td width="70%">
+<input type="text" id="gw_server_adr" name="gw_server_adr" size="30" maxlength="100" value="nilantest.remotecaretaking.co" >  </td>                        </tr>
+                        <tr>
+                           <td>&nbsp;</td>
+                           <td></td>
+                        </tr>
+                        
+                        <tr>
+                           <td>&nbsp;</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>&nbsp;</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>&nbsp;</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td></td>
+                           <td>
+                              <input type="submit" name="save_gw_server" value="Save &amp; Reboot" onclick="return setGWServer();">
+                              &nbsp;&nbsp;
+                              <input type="reset" value="Reset" name="reset" onclick="resetClick()">
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <br>
+               </form>
+            </div>
+	        <div id="content-about" hidden>
+                            	<div class="section">
+                                <h2>ABOUT GSHARE</h2>
+                                <p style="padding-top:50px;">
+Gshare is an offshore software house with many expertises that will benefit your company. You can get your own dedicated software teams that will cover your software needs and get your software projects done by highly educated experts. All this at a very affordable price.</p>
+<p>
+We work hard to offer a very high standard in all our fields and we do our best to get the highest out of our teams. We not only gather our teams to have the best qualifications but also good colleagues that work in a friendly and professional environment.</p>
+<p>Gshare simplifies the outsourcing of your software projects.</p>                          
+							</div>
+                           
+                         
+                        
+                            
+                            </div>
+	        <div id="content-contact" hidden>
+                            	<div class="section">
+                                <h2>CONTACT US</h2>
+                                <div class="col" style="left:5em;">
+                                    <h4>Danish Headquarter</h4>
+                                    	GShare ApS<br> 
+                                      Bellisvej 15<br>
+                                      6430 Nordborg <br>
+                                      Denmark <br><br>
+                                      
+                                      Phone: +45 7349 0000 <br>
+                                      Email: ak@gshare.dk<br>
+                                      Skypeid: allankacz
+                                </div>
+                                    <div class="col" style="left:16em;">
+                                    <h4>Pakistani Division</h4>
+                                    Global Share (SMC-Pvt) Ltd <br>
+				    Office No. 11/12, Al-Rehman Mall, Plot 33, G-11 Markaz./<br>
+                                    Islamabad Pakistan<br>
+                                    <br><b>Country Manager</b><br>
+                                    Kaif Haqqi<br>
+                                    <br>
+                                    Phone:  +92-51-8736092<br>
+                                    Email: kaif.haqqi@gshare.dk<br>
+                                    Skype:kaifhaqqi
+                                    </div>          
+							</div>
+                         
+                         
+                        
+                            
+                            </div>
+                 </div>
+</td>		
+  </tr>
+</table>
+         </div>
+         <div id="footer">
+            Copyright &copy; Lodam
+         </div>
+      </div>
+   </body>
+   <script>
+      function foo() {
+          //alert("Submit button clicked!");
+          if (document.getElementById("lan_type").value == "0")
+          {
+          if(!checkIsIPV4(document.getElementById("lan_gateway").value)){
+      	    alert("Try Again,Default Gateway Wrong!");
+      	return false;
+      	}
+          if(!checkIsIPV4(document.getElementById("lan_ip").value)){
+      	    alert("Try Again,IP Address Wrong!");
+      	return false;
+      	}
+          if(!checkIsIPV4(document.getElementById("lan_mask").value)){
+      	    alert("Try Again,Subnet Mask Wrong!");
+      	return false;
+      	}
+          return true;
+      	}
+      	else
+      	return true;
+          }
+      function myFunction() {
+          alert("Page is loaded");
+      }
+      function checkIsIPV4(entry) {
+        
+        var blocks = entry.split(".");
+        if(blocks.length === 4) {
+          return blocks.every(function(block) {
+            return parseInt(block,10) >=0 && parseInt(block,10) <= 255;
+          });
+        }
+        return false;
+      }
+      function changetextbox()
+      {
+          if (document.getElementById("lan_type").value == "0") {
+              document.getElementById("lan_ip").removeAttribute("disabled");
+      	document.getElementById("lan_mask").removeAttribute("disabled");
+      	document.getElementById("lan_gateway").removeAttribute("disabled");
+      
+          } else {
+              document.getElementById("lan_ip").disabled='true';
+              document.getElementById("lan_mask").disabled='true';
+              document.getElementById("lan_gateway").disabled='true';
+          }
+      }
+   </script>
+</html>

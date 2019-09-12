@@ -1,0 +1,3 @@
+server_address=datacenter.lodam.com
+server_port=5000
+device_numbers=28,29,30
